@@ -8,6 +8,12 @@ class MyHTTPHandler( http.server.SimpleHTTPRequestHandler):
         print("Get response")
         self.send_response(200)
         self.end_headers()
+    def do_POST(self):
+        print("Put response", self.path)
+        print(self.rfile)
+        self.send_response(200)
+        self.end_headers()
+
 
 
 Handler = MyHTTPHandler

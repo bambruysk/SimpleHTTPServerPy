@@ -1,6 +1,6 @@
 import requests 
 import unittest
 
-response = requests.get(r'http://127.0.0.1:8000')
+response = requests.post(r'http://127.0.0.1:8000/test')
 
 print(response)
